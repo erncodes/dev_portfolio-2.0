@@ -7,6 +7,4 @@ function ToggleMenu(){
     menu_icon.classList.replace('fa-bars','fa-xmark');
     else
     menu_icon.classList.replace('fa-xmark','fa-bars');
-
-    console.log(menu_icon.className)
 }
