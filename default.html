@@ -10,13 +10,14 @@
     <script src="/fontawesome/js/all.js"></script>
 </head>
 <body>
-  <div class="test-div">
+  <div class="bee-container" onclick="Hi()">
+      <model-viewer id="bee-model" src="/3D Models/animated-bee-flying-landing-sketch-texture/source/untitled.glb" disable-zoom shadow-intensity="1" loading="eager" interaction-prompt="none" auto-rotate camera-controls autoplay orientation="0 0 -60deg"></model-viewer>
   </div>
     <nav>
       <a href="#" class="logo">Ernni Webbs</a>
       <div class="nav-links-container">
         <a class="btn btn-outline-light" onclick="ToggleMenu()"><i id="menu" class="fa fa-bars"></i></a>
-        <ul class="menu">
+        <ul class="menu" onclick="ToggleMenu()">
           <li><a href="" class="nav-link">Home</a></li>
           <li><a href="" class="nav-link">About</a></li>
           <li><a href="" class="nav-link">Contact</a></li>
@@ -28,13 +29,13 @@
     <header>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 col-sm-10 col-md-9 mx-auto">
               <h1 class="title">
                 <span class="web">Web</span>
                  Developer
-                <span class="last">Front End</span>
-                <span class="last"><i class="fa fa-code-commit"></i></span>
-                <span class="last">Back End</span>
+                <span class="header-variant">Front End</span>
+                <span class="header-variant"><i class="fa fa-code-commit"></i></span>
+                <span class="header-variant">Back End</span>
               </h1>
               <div class="social-media">
                 <ul>
@@ -44,8 +45,8 @@
                 </ul>
         
                 <div class="quick-buttons">
-                  <a href="" class="btn btn-outline-dark">Download CV</a>
-                  <a href="" class="btn btn-dark">Browse More</a>
+                  <a class="btn btn-outline-dark button-15">Download CV</a>
+                  <a class="btn btn-dark">Browse More</a>
                 </div>
               </div>
               <div class="contributions">
@@ -59,104 +60,103 @@
       </div>
     </header>
     <main>
-      <model-viewer src="/3D Models/chibi_bald_business_man_walk.glb" disable-zoom shadow-intensity="1" camera-controls autoplay></model-viewer>
-      <model-viewer src="/3D Models/bee (1)/source/Bee.glb" orientation="0 0 -30deg" disable-zoom shadow-intensity="1" auto-rotate camera-controls autoplay></model-viewer>
       <div class="container">
         <h2 class="title">About My <span>Skills</span></h2>
         <p class="my-3 px-3">For the love of tech and design. Creating hope, building future apps. One project at a time.</p>
-        <div class="row gap-1 px-2">
+        <div class="row gap-1 px-3">
             <h3 class="text-start fw-bold mb-4">I build using</h3>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
               <img src="/images/C-sharp.png" alt="" class="skill-img">
               <div class="skill-content">
-                <p class="skill-title">C#</p>
-                <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
+                <p class="skill-title">CSharp#</p>
               </div>
           </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/js.png" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">Javascript</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/typescript.png" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">Typescript</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
             
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/asp.net.png" alt="" class="skill-img">
                 <div class="skill-content">
-                  <p class="skill-title">.Net Core</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
+                  <p class="skill-title">.NetCore</p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/angular-logo-black-and-white-1.png" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">Angular</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
-              <img src="/images/9073363_mongodb_icon.png" alt="" class="skill-img">
-              <div class="skill-content">
-                <p class="skill-title">Mongo DB</p>
-                <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
-              </div>
-          </div>
-          <div class="skill col-3 flex-grow-1">
-              <img src="/images/sql-server.png" alt="" class="skill-img">
-              <div class="skill-content">
-                <p class="skill-title">SQL server</p>
-                <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
-              </div>
-          </div>
-            <div class="skill col-3 flex-grow-1">
+       
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/html.jpg" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">HTML5</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/css.jpg" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">CSS3</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/sass-icon-1.png" alt="" class="skill-img">
                 <div class="skill-content">
                   <p class="skill-title">Sass</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
                 </div>
             </div>
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
               <img src="/images/bootstrap-brand-icon.png" alt="" class="skill-img">
               <div class="skill-content">
                 <p class="skill-title">Bootstrap</p>
-                <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
               </div>
           </div>
           
-            <div class="skill col-3 flex-grow-1">
+            <div class="skill col-2 flex-grow-1">
                 <img src="/images/gulp.png" alt="" class="skill-img">
                 <div class="skill-content">
-                  <p class="skill-title">Gulp Js</p>
-                  <p class="summary"><span>Lsit amet.</span> <span>Lorem dolor sit.</span> <span>Lorem dolor sit.</span></p>
+                  <p class="skill-title">GulpJs</p>
                 </div>
             </div>
+            <div class="skill col-2 flex-grow-1">
+                <img src="/images/gulp.png" alt="" class="skill-img">
+                <div class="skill-content">
+                  <p class="skill-title">GulpJs</p>
+                </div>
+            </div>
+            <div class="skill col-2 flex-grow-1">
+                <img src="/images/gulp.png" alt="" class="skill-img">
+                <div class="skill-content">
+                  <p class="skill-title">GulpJs</p>
+                </div>
+            </div>
+            <div class="skill col-2 flex-grow-1">
+              <img src="/images/9073363_mongodb_icon.png" alt="" class="skill-img">
+              <div class="skill-content">
+                <p class="skill-title">MongoDB</p>
+              </div>
+          </div>
+          <div class="skill col-2 flex-grow-1">
+              <img src="/images/sql-server.png" alt="" class="skill-img">
+              <div class="skill-content">
+                <p class="skill-title">SQLserver</p>
+              </div>
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="projects-area">
-            <h3 class="project-area-header">Projects</h3>
+            <h3 class="project-area-header"><span>My</span> Projects</h3>
             <div class="row">
                 <div class="col-11 col-sm-8 col-md-4 col-lg-4 project-container">
                   <div class="imgBx"></div>
@@ -169,7 +169,7 @@
                      </div>
                     </div>
                   <div class="content">
-                    <span class="price">App Finanox</span>
+                    <span class="project-name">App Finanox</span>
                   </div>
                 </div>
                 <div class="col-11 col-sm-8 col-md-4 col-lg-4 project-container">
@@ -183,7 +183,7 @@
                 </div>
                     </div>
                   <div class="content">
-                    <span class="price">Novitas Blog</span>
+                    <span class="project-name">Novitas Blog</span>
                   </div>
                 </div>
                 <div class="col-11 col-sm-8 col-md-4 col-lg-4 project-container">
@@ -197,7 +197,7 @@
                      </div>
                     </div>
                   <div class="content">
-                    <span class="price">Urban Strides</span>
+                    <span class="project-name">Urban Strides</span>
                   </div>
                 </div>
                 <div class="col-11 col-sm-8 col-md-4 col-lg-4 project-container">
@@ -211,13 +211,13 @@
                      </div>
                     </div>
                   <div class="content">
-                    <span class="price">Dufty POS</span>
+                    <span class="project-name">Dufty POS</span>
                   </div>
                 </div>
             </div>
         </div>
         <div class="contact-area">
-          <h3>Contact Me</h3>
+          <h3>Contact <span>Me,</span></h3>
             <div class="row text-center">
                 <h3>Let's work together <span>!</span></h3>
                 <div class="col-sm-12 col-md-6" >
@@ -245,16 +245,10 @@
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-6 mt-3">
-                    <h5>About The Developer</h5>
+                    <h5 class="fw-bold">About The Developer</h5>
                     <p class="about">
-                        A skilled software developer with over five years of experience in the retail sector, where 
-                        they developed insights into customer behavior and operational efficiencies. Their career started
-                        in customer support, enhancing their communication and problem-solving skills, before transitioning
-                        to roles involving computer hardware installation,maintenance and troubleshooting, which fueled their interest in
-                        technology. They later advanced into junior management, gaining leadership experience and understanding
-                        team dynamics. Motivated by a passion for technology and innovation, they chose to pursue software 
-                        development to blend their retail knowledge with technical expertise, aiming to create effective 
-                        and user-friendly applications.
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                      Sunt ipsa eligendi quidem facere deserunt quo corporis nam est odit debitis?
                     </p>
                 </div>
             </div>
