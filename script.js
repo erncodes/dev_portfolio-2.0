@@ -50,7 +50,3 @@ window.addEventListener('scroll',()=>{
             test.classList.remove('bottom-left');
         }
 })
-
-function Hi(){
-    console.log(window.scrollY)
-}

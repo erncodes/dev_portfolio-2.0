@@ -4,7 +4,7 @@
 
 /*******Colors*******/
 $primary: #fa00d9;
-$secondary: #ff0000;
+$secondary: #727272;
 $dark: #000000;
 $white: #ffffff;
 html, body {width: auto!important; overflow-x: hidden!important}
@@ -176,7 +176,7 @@ header .title{
     letter-spacing: 3px;
 }
 header .title .web{
-    text-shadow: 10px 9px 6px rgb(255, 0, 0),9px 7px rgb(0, 0, 0);
+    text-shadow: 10px 9px 6px #727272,9px 7px rgb(0, 0, 0);
 }
 .header-variant{
     font-size: 16px;
@@ -206,7 +206,7 @@ header .title .web{
 .social-media svg{
     height: 22px;
     margin-left: 7px;
-    color: #ff0000;
+    color: #727272;
     cursor: pointer;
     transition: 0.5s ease;
     padding: 3px;
@@ -214,7 +214,7 @@ header .title .web{
 }
 .social-media svg:hover{
     transform: translateY(-5px);
-    color: #2b00ff;
+    color: #000000;
 }
 .quick-buttons{
     display: flex;
@@ -239,7 +239,7 @@ header .title .web{
     margin-bottom: 2px;
 }
 .contributions p span{
-    color: #ff0000;
+    color: #727272;
     font-family: "Titillium Web", sans-serif;
 }
 .col-12 img{
@@ -292,7 +292,7 @@ main .container{
     margin-bottom: 0;
     font-weight: 700;
     color: rgba(0, 0, 0, 0);
-    text-shadow: 3px 0px 6px rgba(255, 255, 255, 0.629),3px 0px #ff0000;
+    text-shadow: 3px 0px 6px rgba(255, 255, 255, 0.629),3px 0px #727272;
     transform: translate(-20px,15px) rotate(-45deg);
     font-family: 'Dancing Script';
 
@@ -304,20 +304,22 @@ main .container{
     left: 12px;
     width: 88%;
     height: 90%;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-top: 5px solid #727272;
+    border-bottom: 10px solid #727272;
     box-shadow: 0 0 3px 3px rgba(128, 128, 128, 0.366);
+    border-radius: 5px;
 }
 .main-content h3{
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
 }
 .main-content p{
     font-size: 14px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 main .container h2{
     font-size: 50px;
@@ -331,7 +333,7 @@ main .container h2{
     letter-spacing: 3px;
 }
 main .container h2 span{
-    text-shadow: 10px 9px 6px rgb(255, 0, 0),9px 7px rgb(0, 0, 0);
+    text-shadow: 10px 9px 6px #727272,9px 7px rgb(0, 0, 0);
 }
 .projects-area{
     margin-top: 50px;
@@ -349,7 +351,7 @@ main .container h2 span{
     margin-bottom: 30px;
 }
 .project-area-header span{
-    text-shadow: 10px 9px 6px rgb(255, 0, 0),9px 7px rgb(0, 0, 0);
+    text-shadow: 10px 9px 6px #727272,9px 7px rgb(0, 0, 0);
 }
 .project-container{
     height: 160px;
@@ -375,12 +377,8 @@ main .container h2 span{
     position: relative;
     width: 100%;
     height: 150px;
-    background: red;
-    border-radius: 5px;
     background: url(/images/2.jpg);
     background-size: cover;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
     transition: all 0.5s ease;
 }
 .project-container .content{
@@ -432,7 +430,7 @@ main .container h2 span{
     letter-spacing: 3px;
 }
 .contact-area h3 span{
-    text-shadow: 10px 9px 6px rgb(255, 0, 0),9px 7px rgb(0, 0, 0);
+    text-shadow: 10px 9px 6px #727272,9px 7px rgb(0, 0, 0);
 }
 form{
     background: #ffffff;
