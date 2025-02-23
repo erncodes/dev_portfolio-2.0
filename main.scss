@@ -23,7 +23,7 @@ body{
 .bee-container{
     position: fixed;
     top: 100px;
-    right: 50px;
+    right: 80px;
     width: 50px;
     height: 50px;
     z-index: 15;
@@ -97,8 +97,8 @@ nav{
     z-index: 99;
 }
 nav::after{
-    content: 'Spread Love,Peace And Joy.Spread Love,Peace And Joy.Spread Love,Peace And Joy.';
-    font-size: 6px;
+    content: 'Spread Love,Peace And Joy.Spread Love,Peace And Joy.Spread Love,Peace And Joy.Spread Love,Peace And JoySpread Love,Peace And JoySpread Love,Peace And Joy';
+    font-size: 3px;
     position: absolute;font-family: 'Dancing Script';
     left: -10px;
     bottom: -13px;
@@ -106,7 +106,13 @@ nav::after{
     width: 60%;
     height: 12px;
     transform: skewX(-35deg);
+    box-shadow: 0 2px 2px 2px #201f226d;
     border-radius: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    background: #000000;
+    align-items: center;
+    color: #ffffff;
 }
 .logo{
     color: #000000;
@@ -130,7 +136,7 @@ nav::after{
     position: absolute;
     padding-left: 0;
     padding: 10px 5px;
-    right: -215px;
+    right: -250px;
     top: 65px;
     width: 200px;
     background-color: $dark;
@@ -271,14 +277,6 @@ main .container{
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0 2px !important;
-}
-.skill.style:nth-child(odd){
-    border-radius: 40px 0 0 0;
-    border: 1px solid #8080808f;
-}
-.skill.style:nth-child(even){
-    border-radius: 0 0 40px 0;
-    border: 1px solid #8080808f;
 }
 .skill-img{
     height: 60px;
@@ -435,9 +433,10 @@ main .container h2 span{
 .contact-area{
     min-height: 80vh;
     margin-top: 70px;
+    position: relative;
 }
 .contact-area h3{
-    font-size: 50px;
+    font-size: 49px;
     color: #ffffff00;
     -webkit-text-stroke: 1.5px #8f8d8d00;
     font-weight: 800;
@@ -553,7 +552,7 @@ footer .container-fluid p{
     }
     .nav-links-container .menu{
         padding: 10px 5px;
-        right: -246px;
+        right: -300px;
         top: 68.5px;
         width: 220px;
     }
@@ -640,7 +639,7 @@ footer .container-fluid p{
     }
     .nav-links-container .menu{
         padding: 10px 5px;
-        right: -246px;
+        right: -250px;
         top: 68.5px;
         width: 220px;
     }
@@ -666,8 +665,8 @@ footer .container-fluid p{
         right: 300px;
     }
     .bee-container.bottom-right{
-        top: 350px;
-        right: 100px;
+        top: 500px;
+        right: 500px;
     }
     #bee-model{
         width: 200px;
@@ -690,7 +689,7 @@ footer .container-fluid p{
         font-size: 23px;
     }
     header .title{
-        font-size: 75px;
+        font-size: 65px;
     }
     .header-variant{
         font-size: 22px;
@@ -702,10 +701,123 @@ footer .container-fluid p{
         font-size: 15px;
     }
     main .container h2{
-        font-size: 70px;
+        font-size: 58px;
     }
     .projects-area h3.project-area-header{
-        font-size: 70px;
+        font-size: 58px;
+    }
+    .project-container .content .project-name{
+        font-size: 23px;
+    }
+    .project-container{
+        height: 170px;
+    }
+    .contact-area h3{
+        font-size: 58px;
+        width: 50%;
+    }
+    .contact-area h4{
+        color: #000000;
+    }
+    .contact-area .d-container{
+        position: absolute;
+        top: 0px;
+        right: 100px;
+        border: 1px solid;
+        display: flex;
+    }
+    footer .container-fluid p{
+        font-size: 1.05rem;
+    }
+}
+@media (min-width:992px) {
+    .button-15{
+        font-size: 15px;
+    }
+    nav{
+        padding: 20px 70px;
+    }
+    .nav-links-container .menu{
+        position: static;
+        display: flex;
+        width: auto;
+        background-color: inherit;
+        margin: auto 5px;
+    }
+    .nav-links-container .menu li{
+        background-color: $white;
+        margin-bottom: 0;
+        padding-left: 3px;
+        padding: 5px;
+        border: none;
+    }
+    .nav-links-container .btn{
+        display: none;
+    }
+    .nav-links-container .menu li a{
+        display: block;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    header{
+        padding-top: 70px;
+        height: 95vh;
+        margin-bottom: 60px;
+    }
+    .bee-container{
+        top: 120px;
+        right: 120px;
+        width: 80px;
+        height: 80px;
+    }
+    .bee-container.middle-left{
+        right: 300px;
+    }
+    .bee-container.bottom-left{
+        top: 350px;
+        right: 300px;
+    }
+    .bee-container.bottom-right{
+        top: 400px;
+        right: 800px;
+    }
+    #bee-model{
+        width: 200px;
+        height: 200px;
+    }
+    .col-12 .some{
+        left: 270px;
+        top: -210px;
+    }
+    .some model-viewer{
+        width: 120px;
+    }
+    .button-15{
+        font-size: 16px;
+    }
+    .logo{
+        font-size: 32px;
+    }
+    .nav-links-container a.btn{
+        font-size: 23px;
+    }
+    header .title{
+        font-size: 85px;
+    }
+    .header-variant{
+        font-size: 22px;
+    }
+    .contributions p{
+        font-size: 20px;
+    }
+    .main-content p{
+        font-size: 15px;
+    }
+    main .container h2{
+        font-size: 80px;
+    }
+    .projects-area h3.project-area-header{
+        font-size: 80px;
     }
     .project-container .content .project-name{
         font-size: 23px;
@@ -715,12 +827,11 @@ footer .container-fluid p{
     }
     .contact-area h3{
         font-size: 70px;
+        width: 45%;
     }
     footer .container-fluid p{
         font-size: 1.05rem;
     }
-}
-@media (min-width:992px) {
 }
 @media (min-width:1024px) {
 }
