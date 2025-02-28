@@ -28,6 +28,7 @@ body{
     height: 50px;
     z-index: 15;
     transition: 6s ease;
+    display: none;
 }
 .bee-container.middle-left{
     right: 250px;
@@ -162,7 +163,7 @@ nav::after{
 }
 header{
     margin-top: 75px;
-    height: 90vh;
+    height: auto;
     padding-top: 60px;
 }
 header .container-fluid{
@@ -181,6 +182,7 @@ header .title{
     letter-spacing: 3px;
 }
 header .title .web{
+    transform: rotateX(-40deg);
     text-shadow: 10px 9px 6px #00ffff,9px 7px #000000;
 }
 .header-variant{
@@ -198,18 +200,23 @@ header .title .web{
     width: 35px;
     left: 8px;
 }
-.social-media{
+.quick-actions{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-around;
     margin-top: 15px;
     padding: 7.5px;
-    width: 65%;
     margin-left: auto;
-    z-index: 15;
+    z-index: 16;
 }
-.social-media svg{
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    z-index: 16;
+}
+.social svg{
     height: 22px;
     margin-left: 7px;
     color: #000000;
@@ -218,7 +225,7 @@ header .title .web{
     padding: 3px;
     border-radius: 5px;
 }
-.social-media svg:hover{
+.social svg:hover{
     transform: translateY(-5px);
     color: #00ffff;
 }
@@ -231,11 +238,6 @@ header .title .web{
     border-radius: 2px;
 }
 .contributions{
-    position: absolute;
-    bottom: 35px;
-    left: 10px;
-    padding: 10px 25px;
-    height: 80px;
     transform: rotateX(55deg);
 }
 .contributions p{
@@ -248,18 +250,6 @@ header .title .web{
     color: #00ffff;
     font-family: "Titillium Web", sans-serif;
 }
-.col-12 .some{
-    width: 160px;
-    position: relative;
-    top: -170px;
-    left: -20px;
-    padding: 30px;
-    overflow: visible;
-    transition: 0.5s ease;
-}
-.some model-viewer{
-    width: 120px;
-}
 main{
     min-height: 200vh;
     width: 100%;
@@ -270,6 +260,12 @@ main .container{
     padding: 10px 0;
     text-align: center;
     color: white;
+    position: relative;
+}
+.bald-man{
+    position: absolute;
+    top: -60px;
+    right: -80px;
 }
 .skill{
     margin-bottom: 15px;
@@ -488,7 +484,6 @@ footer .container-fluid p{
         right: 100px;
         width: 50px;
         height: 50px;
-        
     }
     .bee-container.middle-left{
         right: 300px;
@@ -672,13 +667,6 @@ footer .container-fluid p{
         width: 200px;
         height: 200px;
     }
-    .col-12 .some{
-        left: 270px;
-        top: -210px;
-    }
-    .some model-viewer{
-        width: 120px;
-    }
     .button-15{
         font-size: 16px;
     }
@@ -785,13 +773,6 @@ footer .container-fluid p{
         width: 200px;
         height: 200px;
     }
-    .col-12 .some{
-        left: 270px;
-        top: -210px;
-    }
-    .some model-viewer{
-        width: 120px;
-    }
     .button-15{
         font-size: 16px;
     }
@@ -803,6 +784,7 @@ footer .container-fluid p{
     }
     header .title{
         font-size: 85px;
+        width: 60%;
     }
     .header-variant{
         font-size: 22px;
