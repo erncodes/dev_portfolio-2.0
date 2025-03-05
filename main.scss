@@ -16,37 +16,6 @@ body{
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
-
-/*******Small Screens Mobile********/
-@media (min-width:320px) {
-.bee-container{
-    position: fixed;
-    top: 100px;
-    right: 80px;
-    width: 50px;
-    height: 50px;
-    z-index: 15;
-    transition: 6s ease;
-}
-.bee-container.middle-left{
-    right: 250px;
-    transition: 6s ease;
-}
-.bee-container.bottom-left{
-    top: 350px;
-    right: 250px;
-    transition: 6s ease;
-}
-.bee-container.bottom-right{
-    top: 350px;
-    right: 50px;
-    transition: 6s ease;
-}
-#bee-model{
-    width: 130px;
-    height: 150px;
-}
 *a{
     text-decoration: none;
 }
@@ -54,36 +23,65 @@ body{
     list-style: none;
 }
 .button-15 {
-    --b: 3px; 
-    --s: .45em; 
-    --color: #000000;
-    
-    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-    color: var(--color);
-    --_p: var(--s);
-    background : conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-                  var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: .6em;
-    font-size: 14px;
-    border: 0;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    border-radius: 20px 0 20px 0 !important;
+  }
+
+  .button-15.alt{
+    background-color: #000000;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, #525257 0 -3px 0 inset;
+    color: #ffffff;
   }
   
-  .button-15:hover,
-  .button-15:focus-visible{
-    --_p: 0px;
-    outline-color: var(--color);
-    outline-offset: .05em;
+  .button-15:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   }
   
+  .button-15:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
   .button-15:active {
-    background: var(--color);
-    color: #fff;
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
   }
+
+/*******Small Screens Mobile********/
+@media (min-width:320px) {
+    .button-15 {
+        height: 40px;
+        line-height: 1;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 16px;
+        border-radius: 20px 0 20px 0 !important;
+      }
 nav{
     position: fixed;
     top: 0;
@@ -101,10 +99,10 @@ nav::after{
     font-size: 3px;
     position: absolute;font-family: 'Dancing Script';
     left: -10px;
-    bottom: -13px;
+    bottom: -11px;
     background-color: rgb(255, 255, 255);
-    width: 60%;
-    height: 12px;
+    width: 70%;
+    height: 10px;
     transform: skewX(-35deg);
     box-shadow: 0 2px 2px 2px #201f226d;
     border-radius: 0 0 15px 0;
@@ -114,7 +112,7 @@ nav::after{
     align-items: center;
     color: #ffffff;
 }
-.logo{
+nav .logo{
     color: #000000;
     font-size: 24px;
     font-weight: 700;
@@ -161,9 +159,9 @@ nav::after{
     display: inline-block;
 }
 header{
-    margin-top: 75px;
+    margin-top: 60px;
     height: auto;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 header .container-fluid{
     position: relative;
@@ -182,7 +180,7 @@ header .title{
 }
 header .title .web{
     transform: rotateX(-40deg);
-    text-shadow: 10px 9px 6px #00ffff,9px 7px #000000;
+    text-shadow: 10px 9px 6px #370000,9px 7px #000000;
 }
 .header-variant{
     font-size: 16px;
@@ -200,23 +198,58 @@ header .title .web{
     left: 8px;
 }
 .quick-actions{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     margin-top: 15px;
-    padding: 7.5px;
+    padding: 7.5px 20px;
     margin-left: auto;
-    z-index: 16;
+    position: relative;
+}
+.xs{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    color: black;
+}
+.xs svg{
+    color: #370000;
+}
+.quick-actions::after{
+    position: absolute;
+    content: '';
+    background: linear-gradient(to right,white,white);
+    top: 30%;
+    right: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 500px;
+    transform: translateX(-45px) rotate(-30deg);
+}
+.dev-container{
+    position: relative;
+    background-image: url(/images/coding-1.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    min-width: 300px;
+    border-radius: 5px;
+    display: flex;
+}
+.dev-container .img-1{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    right: 5px;
+}
+.quick-actions .button-15{
+    width: auto;
 }
 .social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
+    margin: 5px 0;
     z-index: 16;
 }
 .social svg{
-    height: 22px;
+    font-size: 20px;
     margin-left: 7px;
     color: #000000;
     cursor: pointer;
@@ -226,7 +259,7 @@ header .title .web{
 }
 .social svg:hover{
     transform: translateY(-5px);
-    color: #00ffff;
+    color: #370000;
 }
 .quick-buttons{
     display: flex;
@@ -236,18 +269,8 @@ header .title .web{
     margin-bottom: 10px;
     border-radius: 2px;
 }
-.contributions{
-    transform: rotateX(55deg);
-}
-.contributions p{
-    font-weight: bold;
-    font-size: 15px;
-    color: #000000;
-    margin-bottom: 5px;
-}
-.contributions p span{
-    color: #00ffff;
-    font-family: "Titillium Web", sans-serif;
+.okyy.lg{
+    display: none;
 }
 main{
     min-height: 200vh;
@@ -299,7 +322,7 @@ main .container{
 .skill-title{
     font-weight: 800;
     color: rgb(255, 255, 255);
-    text-shadow: 3px 0px 6px #00ffff,3px 0px #201f22;
+    text-shadow: 3px 0px 6px #370000,3px 0px #201f22;
     font-family: 'Dancing Script';
     margin-bottom: 0;
 }
@@ -341,7 +364,7 @@ main .container h2{
     letter-spacing: 3px;
 }
 main .container h2 span{
-    text-shadow: 10px 9px 6px #ffffff,9px 7px #00ffff;
+    text-shadow: 10px 9px 6px #ffffff,9px 7px #370000;
 }
 .projects-area{
     margin-top: 50px;
@@ -359,7 +382,7 @@ main .container h2 span{
     margin-bottom: 30px;
 }
 .project-area-header span{
-    text-shadow: 10px 9px 6px #00ffff,9px 7px #000000;
+    text-shadow: 10px 9px 6px #370000,9px 7px #000000;
 }
 .project-container{
     height: 160px;
@@ -399,7 +422,7 @@ main .container h2 span{
     border-bottom: 5px solid black;
 }
 .project-container:nth-child(odd) .content{
-    border-bottom: 5px solid #00ffff;
+    border-bottom: 5px solid #370000;
 }
 .project-container .content .project-name{
     position: absolute;
@@ -442,7 +465,7 @@ main .container h2 span{
     letter-spacing: 3px;
 }
 .contact-area h3 span{
-    text-shadow: 10px 9px 6px #00ffff,9px 7px #000000;
+    text-shadow: 10px 9px 6px #370000,9px 7px #000000;
 }
 form{
     background: #ffffff;
@@ -473,32 +496,7 @@ footer .container-fluid p{
         right: -25px;
     }
     header{
-        padding-top: 40px;
-        padding-left: 5px;
-        padding-right: 10px;
-        margin-bottom: 150px;
-    }
-    .bee-container{
-        top: 100px;
-        right: 100px;
-        width: 50px;
-        height: 50px;
-    }
-    .bee-container.middle-left{
-        right: 300px;
-    }
-    .bee-container.bottom-left{
-        top: 350px;
-        right: 300px;
-    }
-    .bee-container.bottom-right{
-        top: 350px;
-        right: 100px;
-    }
-    #bee-model{
-        width: 130px;
-        height: 150px;
-        
+        padding: 40px 15px;
     }
     .button-15{
         font-size: 16px;
@@ -515,8 +513,37 @@ footer .container-fluid p{
     .header-variant{
         font-size: 17px;
     }
-    .contributions p{
-        font-size: 16px;
+    .main-content p{
+        font-size: 15px;
+    }
+    main .container h2{
+        font-size: 53px;
+    }
+    .projects-area h3.project-area-header{
+        font-size: 53px;
+    }
+    .project-container .content .project-name{
+        font-size: 23px;
+    }
+    .contact-area h3{
+        font-size: 53px;
+    }
+    footer .container-fluid p{
+        font-size: 1.05rem;
+    }
+}
+@media (min-width:425px) {
+    .nav-links-container a.btn{
+        font-size: 23px;
+    }
+    header .title{
+        font-size: 53px;
+    }
+    .header-variant{
+        font-size: 17px;
+    }
+    .oryt{
+        border: 1px solid white;
     }
     .main-content p{
         font-size: 15px;
@@ -558,29 +585,6 @@ footer .container-fluid p{
         padding-left: 5px;
         padding-right: 10px;
     }
-    .bee-container{
-        top: 100px;
-        right: 100px;
-        width: 50px;
-        height: 50px;
-        
-    }
-    .bee-container.middle-left{
-        right: 300px;
-    }
-    .bee-container.bottom-left{
-        top: 350px;
-        right: 300px;
-    }
-    .bee-container.bottom-right{
-        top: 350px;
-        right: 100px;
-    }
-    #bee-model{
-        width: 130px;
-        height: 150px;
-        
-    }
     .button-15{
         font-size: 16px;
     }
@@ -595,9 +599,6 @@ footer .container-fluid p{
     }
     .header-variant{
         font-size: 19px;
-    }
-    .contributions p{
-        font-size: 18px;
     }
     .main-content p{
         font-size: 15px;
@@ -645,27 +646,6 @@ footer .container-fluid p{
         height: 95vh;
         margin-bottom: 60px;
     }
-    .bee-container{
-        top: 120px;
-        right: 120px;
-        width: 80px;
-        height: 80px;
-    }
-    .bee-container.middle-left{
-        right: 300px;
-    }
-    .bee-container.bottom-left{
-        top: 350px;
-        right: 300px;
-    }
-    .bee-container.bottom-right{
-        top: 500px;
-        right: 500px;
-    }
-    #bee-model{
-        width: 200px;
-        height: 200px;
-    }
     .button-15{
         font-size: 16px;
     }
@@ -680,9 +660,6 @@ footer .container-fluid p{
     }
     .header-variant{
         font-size: 22px;
-    }
-    .contributions p{
-        font-size: 20px;
     }
     .main-content p{
         font-size: 15px;
@@ -718,11 +695,11 @@ footer .container-fluid p{
     }
 }
 @media (min-width:992px) {
-    .button-15{
-        font-size: 15px;
-    }
     nav{
         padding: 20px 70px;
+    }
+    nav::after{
+        width: 70%;
     }
     .nav-links-container .menu{
         position: static;
@@ -748,29 +725,8 @@ footer .container-fluid p{
     }
     header{
         padding-top: 70px;
-        height: 95vh;
+        height: 90vh;
         margin-bottom: 60px;
-    }
-    .bee-container{
-        top: 120px;
-        right: 120px;
-        width: 80px;
-        height: 80px;
-    }
-    .bee-container.middle-left{
-        right: 300px;
-    }
-    .bee-container.bottom-left{
-        top: 350px;
-        right: 300px;
-    }
-    .bee-container.bottom-right{
-        top: 400px;
-        right: 800px;
-    }
-    #bee-model{
-        width: 200px;
-        height: 200px;
     }
     .button-15{
         font-size: 16px;
@@ -781,15 +737,67 @@ footer .container-fluid p{
     .nav-links-container a.btn{
         font-size: 23px;
     }
+    .okyy.lg{
+        display: block;
+    }
+    .okyy.sm{
+        display: none;
+    }
     header .title{
-        font-size: 85px;
-        width: 60%;
+        font-size: 75px;
+        width: 50%;
     }
     .header-variant{
-        font-size: 22px;
-    }
-    .contributions p{
         font-size: 20px;
+    }
+    .quick-actions{
+        border-radius: 40% 0 40% 0;
+    }
+    .quick-actions::after{
+        position: absolute;
+        content: '';
+        background: linear-gradient(to right,white,white,#370000);
+        top: -20%;
+        right: -5%;
+        z-index: -1;
+        width: 140%;
+        height: 800px;
+    }
+    .dev-container{
+        position: relative;
+        background-image: url(/images/coding-1.png);
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+        width: 620px;
+        border-radius: 15px;
+        display: block;
+    }
+    .dev-container .img-1{
+        width: 220px;
+        height: 220px;
+        position: relative;
+        right: 5px;
+        margin-bottom: 40px;
+    }
+    .oryt{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+    .social{
+        margin-bottom: 20px;
+    }
+    .xs{
+        bottom: -10%;
+    }
+    .okyy model-viewer{
+        width: 500px;
+        height: 300px;
+    }
+    .social svg{
+        height: 30px;
+        margin-left: 10px;
     }
     .main-content p{
         font-size: 15px;
