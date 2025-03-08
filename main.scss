@@ -436,6 +436,22 @@ main .container h2 span{
     border-radius: 0 40px 40px 0;
     text-shadow: 10px 9px 6px $white,9px 9px $dark;
 }
+.quote{
+    font-family: 'Dancing Script';
+    font-size: 18px;
+    min-height: 120px;
+    position: absolute;
+    transform: translateY(20px);
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote h4{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    color: $primary;
+}
 @keyframes moveup {
     0%{ top: 0;}
     100%{ top: -140px;}
@@ -467,6 +483,11 @@ main .container h2 span{
 .contact-area h3 span{
     text-shadow: 10px 9px 6px $primary,9px 7px $dark;
 }
+.message{
+    font-weight: bold;
+    color: $dark;
+    margin-top: 190px;
+}
 form{
     background: $white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -474,11 +495,15 @@ form{
 }
 footer .container-fluid{
     background: $dark;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    min-height: 70px;
 }
 footer .container-fluid p{
     font-size: 0.9rem;
     color: $white;
+    margin: auto 0;
 }
 
 }
@@ -805,6 +830,21 @@ footer .container-fluid p{
     }
     .project-container{
         height: 170px;
+    }
+    .quote{
+        font-family: 'Dancing Script';
+        font-size: 25px;
+        min-height: 120px;
+        position: absolute;
+        transform: translateY(-150px);
+        color: $dark;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote h4{
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
     }
     .contact-area h3{
         font-size: 70px;
