@@ -203,21 +203,37 @@ header .title .web{
     margin-left: auto;
     position: relative;
 }
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+}
+.buttons .button-15{
+    min-width:120px;
+    margin-right: 10px;
+}
+.intro{
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 0;
+}
 .xs{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     font-family: 'Dancing Script';
-    font-weight: bold;
+    font-weight: 700;
     color: $dark;
 }
 .xs svg{
-    color: $primary;
+    color: $dark;
 }
 .quick-actions::after{
     position: absolute;
     content: '';
-    background: linear-gradient(to right,$white,$secondary,$white);
+    background: linear-gradient(to right,$white,$primary,$white);
     top: 10%;
     right: -15%;
     z-index: -1;
@@ -236,21 +252,21 @@ header .title .web{
     display: flex;
 }
 .dev-container .img-1{
-    width: 160px;
-    height: 160px;
+    width: 170px;
+    height: 170px;
     position: relative;
     right: 5px;
 }
-.quick-actions .button-15{
-    width: auto;
-}
 .social{
-    margin: 5px 0;
+    margin: 20px 0;
     z-index: 16;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .social svg{
-    font-size: 20px;
-    margin-left: 7px;
+    font-size: 23px;
+    margin-bottom: 10px;
     color: $dark;
     cursor: pointer;
     transition: 0.5s ease;
@@ -259,15 +275,15 @@ header .title .web{
 }
 .social svg:hover{
     transform: translateY(-5px);
-    color: $primary;
+    background-color: #00000061;
+    color: $white;
 }
 .quick-buttons{
     display: flex;
     flex-direction: column;
 }
-.quick-buttons .btn{
-    margin-bottom: 10px;
-    border-radius: 2px;
+.quick-actions .button-15{
+    width: auto;
 }
 .okyy.lg{
     display: none;
@@ -318,6 +334,8 @@ main .container{
     list-style: disc;
     color: $secondary;
     padding-left: 2px;
+    display: none !important;
+    padding-left: 5px;
 }
 .skill-title{
     font-weight: 800;
@@ -493,6 +511,9 @@ form{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0.5rem;
 }
+footer{
+    margin-top: auto;
+}
 footer .container-fluid{
     background: $dark;
     display: flex;
@@ -628,12 +649,35 @@ footer .container-fluid p{
     .main-content p{
         font-size: 15px;
     }
+    .oryt{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .dev-container .img-1{
+        width: 200px;
+        height: 200px;
+        right: 5px;
+    }
+    .social svg{
+        font-size: 25px;
+        margin-left: 7px;
+        padding: 3px;
+    }
+   
+    .quick-actions .button-15{
+        width: 150px;
+    }
     main .container h2{
         font-size: 63px;
     }
     main{
     background: linear-gradient(to bottom,$dark 35%,$white 35%);
     }
+.skill-content li{
+    display: block !important;
+}
     .projects-area h3.project-area-header{
         font-size: 63px;
     }
@@ -651,8 +695,21 @@ footer .container-fluid p{
     }
 }
 @media (min-width:768px) {
-    .button-15{
-        font-size: 12px;
+    .quick-buttons{
+       display: none;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+    }
+    .buttons .button-15{
+        min-width:120px;
+        margin-right: 10px;
+    }
+    .intro{
+        font-size: 22px;
     }
     nav{
         padding: 20px 30px;
@@ -671,6 +728,14 @@ footer .container-fluid p{
         height: 95vh;
         margin-bottom: 60px;
     }
+    .social{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .social svg{
+        margin-bottom: 15px;
+    }
     .button-15{
         font-size: 16px;
     }
@@ -685,6 +750,27 @@ footer .container-fluid p{
     }
     .header-variant{
         font-size: 22px;
+    }
+    .dev-container .img-1{
+        width: 200px;
+        height: 200px;
+        right: -50px;
+    }
+    .okyy.lg{
+        display: block;
+    }
+    .okyy.sm{
+        display: none;
+    }
+    .xs{
+        left: 0;
+        bottom: -120px;
+    }
+    .quick-actions::after{
+        top: 10%;
+        right: -25%;
+        width: 120%;
+        height: 800px;
     }
     .main-content p{
         font-size: 15px;
@@ -701,12 +787,21 @@ footer .container-fluid p{
     .project-container{
         height: 170px;
     }
+    .contact-area{
+        height: 90vh;
+    }
     .contact-area h3{
         font-size: 58px;
         width: 50%;
     }
-    .contact-area h4{
+    .quote{
+        transform: translateY(-130px);
+    }
+    .contact-area h4.message,form{
         color: $dark;
+        position: relative;
+        top: -140px;
+        margin-bottom: 0;
     }
     footer .container-fluid p{
         font-size: 1.05rem;
@@ -755,12 +850,6 @@ footer .container-fluid p{
     .nav-links-container a.btn{
         font-size: 23px;
     }
-    .okyy.lg{
-        display: block;
-    }
-    .okyy.sm{
-        display: none;
-    }
     header .title{
         font-size: 75px;
         width: 50%;
@@ -781,22 +870,16 @@ footer .container-fluid p{
         height: 800px;
     }
     .dev-container{
-        position: relative;
-        background-image: url(/images/coding-1.png);
-        background-position: center;
-        background-size: cover;
-        height: 450px;
-        width: 620px;
-        border-radius: 15px;
-        display: block;
+        height: 400px;
+        min-width: 300px;
+        overflow: visible;
     }
     .dev-container .img-1{
-        width: 220px;
-        height: 220px;
-        position: relative;
+        width: 300px;
+        height: 300px;
         right: 5px;
-        margin-bottom: 40px;
     }
+
     .oryt{
         display: flex;
         flex-direction: column;
@@ -804,9 +887,17 @@ footer .container-fluid p{
     }
     .social{
         margin-bottom: 20px;
+        position: relative;
+        top: -100px;
+    }
+    .buttons{
+        justify-content: flex-start;
+        height: 100px;
+        position: relative;
+        top: -100px;
     }
     .xs{
-        bottom: -10%;
+        bottom: -70px;
     }
     .okyy model-viewer{
         width: 400px;
