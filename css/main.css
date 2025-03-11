@@ -811,6 +811,9 @@ body {
   .header-mini {
     font-size: 22px;
   }
+  .model {
+    left: 100px;
+  }
   .model.lg {
     display: block;
   }
@@ -856,6 +859,10 @@ body {
     color: #000000;
     position: relative;
     top: -140px;
+    margin-bottom: 0;
+  }
+  .contact-area h4.message {
+    top: -150px;
     margin-bottom: 0;
   }
   footer .container-fluid p {
@@ -978,6 +985,10 @@ body {
   }
   .project-container {
     height: 170px;
+  }
+  .contact-area h4.message {
+    top: -160px;
+    margin-bottom: 0;
   }
   .quote {
     font-family: "Dancing Script";

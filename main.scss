@@ -800,6 +800,9 @@ footer .container-fluid p{
     .header-mini{
         font-size: 22px;
     }
+    .model{
+        left: 100px;
+    }
     .model.lg{
         display: block;
     }
@@ -845,6 +848,10 @@ footer .container-fluid p{
         color: $dark;
         position: relative;
         top: -140px;
+        margin-bottom: 0;
+    }
+    .contact-area h4.message{
+        top: -150px;
         margin-bottom: 0;
     }
     footer .container-fluid p{
@@ -967,6 +974,10 @@ footer .container-fluid p{
     }
     .project-container{
         height: 170px;
+    }
+    .contact-area h4.message{
+        top: -160px;
+        margin-bottom: 0;
     }
     .quote{
         font-family: 'Dancing Script';
