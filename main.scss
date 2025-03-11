@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /*******Colors*******/
-$primary: #52ea1f;
+$primary: #020994;
 $secondary: #afbdc3;
 $dark: #000000;
 $white: #FFFCF7;
@@ -137,8 +137,9 @@ nav .logo{
     right: -250px;
     top: 65px;
     width: 200px;
-    background-color: $dark;
-    z-index: 88;
+    height: 510px;
+    background-color: #000000e0;
+    z-index: 99;
     border-radius: 0 0 0 5px;
     transition: 0.5s ease;
 }
@@ -219,18 +220,16 @@ header .title .web-span{
     margin-bottom: 0;
 }
 .social-container{
-    z-index: 99;
     position: relative;
     left: -80px;
 }
 .experience{
     position: absolute;
-    background-color: #000000b5;
     left: 0;
     bottom: 20px;
     font-family: 'Dancing Script';
     font-weight: 700;
-    color: $white;
+    color: $dark;
     padding: 5px;
 }
 .experience svg{
@@ -239,8 +238,8 @@ header .title .web-span{
 .quick-actions::after{
     position: absolute;
     content: '';
-    background: linear-gradient(to right,$white,$primary,$dark);
-    top: 13%;
+    background: linear-gradient(to right,$white,$secondary,$dark);
+    top: 16%;
     right: -15%;
     z-index: -1;
     width: 150%;
@@ -251,7 +250,8 @@ header .title .web-span{
     position: relative;
     background-image: url(/images/coding-1.png);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 250px;
     min-width: 300px;
     border-radius: 5px;
@@ -275,8 +275,8 @@ header .title .web-span{
 }
 .social svg:hover{
     transform: translateY(-5px);
-    background-color: #00000061;
-    color: $white;
+    background-color: $white;
+    color: $dark;
 }
 .quick-buttons{
     display: flex;
@@ -284,6 +284,10 @@ header .title .web-span{
 }
 .quick-actions .button-15{
     width: auto;
+}
+.model{
+    position: relative;
+    left: -100px;
 }
 .model.lg{
     display: none;
@@ -528,14 +532,18 @@ footer .container-fluid p{
 
 }
 @media (min-width:375px) {
+    .quick-actions::after{
+        top: 25%;
+        right: -10%;
+    }
     nav{
         padding: 20px 25px;
     }
     .nav-links-container .menu{
         padding: 10px 5px;
-        right: -246px;
+        right: -300px;
         top: 68.5px;
-        width: 220px;
+        width: 250px;
     }
     .nav-links-container .menu.active{
         right: -25px;
@@ -591,7 +599,17 @@ footer .container-fluid p{
         font-size: 17px;
     }
     .social-container{
-        left: 10px;
+        left: -5px;
+    }
+    .dev-container{
+        height: 250px;
+        min-width: 300px;
+        border-radius: 5px;
+        display: flex;
+    }
+    .quick-actions::after{
+        top: 40%;
+        right: -10%;
     }
     .main-content p{
         font-size: 15px;
@@ -846,6 +864,7 @@ footer .container-fluid p{
         width: auto;
         background-color: inherit;
         margin: auto 5px;
+        height: auto;
     }
     .nav-links-container .menu li{
         background-color: $white;
@@ -907,6 +926,9 @@ footer .container-fluid p{
     }
     .social{
         margin-bottom: 20px;
+    }
+    .social svg{
+        color: $white;
     }
     .buttons{
         justify-content: flex-start;
