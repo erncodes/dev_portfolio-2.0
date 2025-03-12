@@ -230,11 +230,13 @@ body {
     bottom: 20px;
     font-family: "Dancing Script";
     font-weight: 700;
-    color: #000000;
+    color: #FFFCF7;
+    background-color: rgba(0, 0, 0, 0.8784313725);
+    border-radius: 3px;
     padding: 5px;
   }
   .experience svg {
-    color: #020994;
+    color: #FFFCF7;
   }
   .quick-actions::after {
     position: absolute;
@@ -523,8 +525,9 @@ body {
   }
   form {
     background: #FFFCF7;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(93, 93, 98, 0.371) 0px 7px 29px 0px;
     padding: 0.5rem;
+    border-radius: 5px;
   }
   footer {
     margin-top: auto;

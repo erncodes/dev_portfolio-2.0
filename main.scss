@@ -229,11 +229,13 @@ header .title .web-span{
     bottom: 20px;
     font-family: 'Dancing Script';
     font-weight: 700;
-    color: $dark;
+    color: $white;
+    background-color: #000000e0;
+    border-radius: 3px;
     padding: 5px;
 }
 .experience svg{
-    color: $primary;
+    color: $white;
 }
 .quick-actions::after{
     position: absolute;
@@ -511,8 +513,9 @@ main .container h2 span{
 }
 form{
     background: $white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(93, 93, 98, 0.371) 0px 7px 29px 0px;
     padding: 0.5rem;
+    border-radius: 5px;
 }
 footer{
     margin-top: auto;
